@@ -1,0 +1,7 @@
+What does CBasePlayerWeapon::ReloadSound() is :
+- Looping through all players ;
+- Checking if the distance between the one who reload and others players are <= 512 units ;
+- If so, sending a ReloadSound message to the concerned players.
+About ReloadSound message :
+- arg 1 : probably the sound volume based on the distance. (decompiled code gives : (1.0 - distance * 0.001953125) * 255.0) & 0xFF )
+- arg 2 : 0 if the weapons are either m3 or xm1014, 1 otherwise.
